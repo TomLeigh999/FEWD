@@ -1,0 +1,187 @@
+/* 
+Project Name: Ecard.ly
+Client: General Assembly 
+Author: Christopher Castig | @castig
+Developer @GA in NYC
+*/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+
+@font-face {
+    font-family: 'AnonymousProRegular';
+    src: url('../fonts/Anonymous_Pro-webfont.eot');
+    src: url('../fonts/Anonymous_Pro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Anonymous_Pro-webfont.woff') format('woff'),
+         url('../fonts/Anonymous_Pro-webfont.ttf') format('truetype'),
+         url('../fonts/Anonymous_Pro-webfont.svg#AnonymousProRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right; 
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left; 
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/*----------------------------------------------------------------------------- 
+BODY 
+-----------------------------------------------------------------------------*/
+h1
+{
+	font-family: 'Faster One', arial;
+	font-size: 60px;
+}
+
+body {
+	background: url('../images/background.jpg') repeat-x #d6d6d6; /* add a fallback color of #d6d6d6 */
+	color: #000000;
+	font-family: monospace;
+	line-height: 1.7; /* line-height is unit-less */
+	font-size: 12px;
+	padding: 50px;
+}
+
+a {
+	color: #ff3300;
+	text-decoration: none;
+	font-weight: bold;
+	max-width: 280px;
+}
+
+/* Put the image on the <a> and not the <h1> itself so that the link works properly */
+h1 a {
+	background: url('../images/logo.png') no-repeat;
+	width: 216px;
+	height: 213px;
+	margin: auto;
+	display: block;	
+	
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+h2 {
+	font-size: 20px;
+	margin: 10px 0;
+}
+	h2 a {
+		text-decoration: none;
+		color: #000000;
+	}
+	h2 a:hover
+	{
+		color: blue;
+		opacity: 50%;
+	}
+
+
+/*----------------------------------------------------------------------------- 
+MAIN SECTIONS
+-----------------------------------------------------------------------------*/
+
+/* Center the container */
+#container 
+{
+	width: 940px;
+	margin: auto;	
+	float: left;
+}
+
+#header {
+	margin-bottom: 40px;
+}
+
+#main {
+	
+	width: 640px;
+
+}
+
+	.post {
+		margin-bottom: 50px;
+	}
+
+#sidebar
+{
+width: 280px;
+margin-left: 20px;
+}
+#sidebar, #main
+{
+
+	float: left;
+	padding: 20px;
+	background: #fff;
+}
+footer
+{
+	padding: 50px;
+	clear:both;
+	text-align: center; 
+
+}
+footer a.facebook,
+footer a.pinterest,
+footer a.twitter
+{
+	text-indent:100%;
+	white-space: nowrap;
+	overflow: hidden;
+	display: inline-block;
+	width: 42px;
+	height: 42px;
+	margin: 0 auto;
+
+}
+footer a.facebook{
+	background: url('../images/social-icon-facebook.png')
+}
+footer a.twitter{
+	background: url('../images/social-icon-twitter.png')
+}
+footer a.pinterest{
+	background: url('../images/social-icon-pinterest.png')
+
+}
+
+#blog
+{
+	margin: 20px;
+	float: left;
+	width: 640px;
+	padding: 20px;
+	background: #fff;
+}
+.small
+{
+	width: 480px;
+	height: auto;
+
+}
